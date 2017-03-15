@@ -1,0 +1,16 @@
+{
+  "generator-ng-fullstack": {
+    "appName": "web-patterns",
+    "username": "alterdata",
+    "userEmail": "bernardbr@gmail.com",
+    "stack": "client",
+    "repoHostUrl": "github.com",
+    "userNameSpace": "alterdata",
+    "client": "ng1",
+    "stylePreprocessor": "none",
+    "server": "",
+    "secure": false,
+    "testsSeparated": true,
+    "cordova": false
+  }
+}
