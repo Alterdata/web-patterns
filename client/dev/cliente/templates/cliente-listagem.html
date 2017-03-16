@@ -1,3 +1,32 @@
-<div>
-  <h1>my new view :D - it's called cliente-listagem</h1>
-</div>
+<form name="cliente-listagem" class="container form-horizontal">
+  <div class="form-group">
+    <h3>Cadastro de cliente</h3>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary">Novo</button>
+  </div>
+  <div class="form-group">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="col-xs-12 col-sm-6 col-md-8">Nome</th>
+            <th class="col-xs-6 col-md-4">Data Nascimento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="cliente in clienteListagemCtrl.clientes">
+            <td class="col-xs-10 col-sm-4 col-md-6" ng-bind="cliente.nome"></td>
+            <td class="col-xs-6 col-md-4" ng-bind="cliente.dataNascimento | date : 'dd/MM/yyyy'"></td>
+            <td class="col-xs-1 col-md-1">
+              <button class="btn btn-default">Editar</button>
+            </td>
+            <td class="col-xs-1 col-md-1">
+              <button class="btn btn-danger">Remover</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</form>
