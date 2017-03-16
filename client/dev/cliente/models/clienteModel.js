@@ -3,7 +3,7 @@
 
   ng.module('web-patterns')
     .factory('ClienteModel', [
-      function() {
+      function ClienteModel() {
         class ClienteModel {
           constructor() {
             this.nome = '';

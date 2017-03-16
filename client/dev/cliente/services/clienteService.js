@@ -4,7 +4,7 @@
   ng.module('web-patterns')
     .service('$clienteService', [
       '$clienteResource',
-      function ($clienteResource) {
+      function ClienteService($clienteResource) {
         class ClienteService {
           constructor() {
           }

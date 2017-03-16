@@ -4,7 +4,7 @@
   ng.module('web-patterns')
     .factory('$clienteResource', [
       '$resource',
-      function ($resource) {
+      function ClienteResource($resource) {
         const _url = 'https://private-a1421-webpatterns.apiary-mock.com/clientes/:id';
 
         const _params = {
