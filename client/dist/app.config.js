@@ -1,0 +1,1 @@
+'use strict';;(function(a){'use strict';a.module('web-patterns').config(['$locationProvider',function(b){b.html5Mode(!0)}])})(window.angular);

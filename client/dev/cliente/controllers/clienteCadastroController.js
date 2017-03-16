@@ -5,7 +5,7 @@
     .controller('ClienteCadastroController', [
       '$clienteService',
       'ClienteModel',
-      function ClienteCadastroController($clienteService, ClienteModel) {
+      function ClienteCadastroControllerFn($clienteService, ClienteModel) {
         class ClienteCadastroController {
           constructor() {
             var self = this;
