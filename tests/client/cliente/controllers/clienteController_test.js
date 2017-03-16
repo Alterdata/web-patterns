@@ -1,8 +1,8 @@
 'use strict';
 
-describe('clienteController', function () {
+describe('ClienteCadastroController', function () {
   var _scope;
-  var CONTROLLER_NAME = 'clienteController as ctrl';
+  var CONTROLLER_NAME = 'ClienteCadastroController as clienteCadastroctrl';
 
   beforeEach(module('web-patterns'));
 

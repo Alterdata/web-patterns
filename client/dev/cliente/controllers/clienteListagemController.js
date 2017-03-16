@@ -4,7 +4,7 @@
   ng.module('web-patterns')
     .controller('ClienteListagemController', [
       '$clienteService',
-      function ClienteListagemController($clienteService) {
+      function ClienteListagemControllerFn($clienteService) {
         class ClienteListagemController {
           constructor() {
             var self = this;
