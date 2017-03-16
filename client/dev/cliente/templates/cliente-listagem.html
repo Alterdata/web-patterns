@@ -1,32 +1,67 @@
-<form name="cliente-listagem" class="container form-horizontal">
-  <div class="form-group">
-    <h3>Cadastro de cliente</h3>
-  </div>
-  <div class="form-group">
-    <button class="btn btn-primary">Novo</button>
-  </div>
-  <div class="form-group">
-    <div class="table-responsive">
-      <table class="table">
-        <thead>
-          <tr>
-            <th class="col-xs-12 col-sm-6 col-md-8">Nome</th>
-            <th class="col-xs-6 col-md-4">Data Nascimento</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="cliente in clienteListagemCtrl.clientes">
-            <td class="col-xs-10 col-sm-4 col-md-6" ng-bind="cliente.nome"></td>
-            <td class="col-xs-6 col-md-4" ng-bind="cliente.dataNascimento | date : 'dd/MM/yyyy'"></td>
-            <td class="col-xs-1 col-md-1">
-              <button class="btn btn-default">Editar</button>
-            </td>
-            <td class="col-xs-1 col-md-1">
-              <button class="btn btn-danger">Remover</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+<div class="col-md-10 col-md-offset-1">
+    <h1 class="h1">Cadastro de clientes</h1>
+</div>
+
+<div class="col-md-10 col-md-offset-1">
+    <div class="row">
+
+        <div class="col-md-2 col-sm-2 m-t-20">
+            <button type="button" class="btn" ng-click="clienteListagemCtrl.novoPerfil()">Novo</button>
+        </div>
+
+        <div class="col-md-5 col-sm-10 col-md-offset-5 m-t-20">
+            <form>
+                <input type="text" class="form-control input-buscar" placeholder="Digite aqui sua busca..." ng-model="pesquisa">
+            </form>
+        </div>
+
+        <div class="col-md-12 col-sm-12" ng-if="!clienteListagemCtrl.loading">
+            <div class="m-t-20 panel panel-default ajusta-panel-default">
+                <div class="height_40 panel-heading hidden-xs hidden-sm">
+                    <div class="row">
+                        <span class="col-md-3">Nome</span>
+                        <span class="col-md-6 offset-0-right">Data nascimento</span>
+                    </div>
+                </div>
+                <ul class="list-group">
+
+                    <div class="cor-zebrado1" ng-if="clienteListagemCtrl.clientes.length == 0 || (clienteListagemCtrl.clientes | filter:pesquisa).length == 0">
+                        <p class="p-grid-vazia">Nenhum perfil encontrado.</p>
+                    </div>
+
+                    <li class="list-group-item" ng-repeat="cliente in clienteListagemCtrl.clientes | filter: pesquisa | orderBy: 'nome' track by $index" ng-class-odd="'cor-zebrado1'" ng-class-even="'cor-zebrado2'">
+                        <div class="row">
+                            <p class="col-md-3 col-xs-12 col-sm-12 margin-top-5 margin-bottom-0">
+                                <strong class="visible-xs visible-sm strong_modal">
+                                    Nome:
+                                </strong>
+                                <span ng-bind="cliente.nome"></span>
+                            </p>
+
+                            <p class="col-md-6 col-xs-12 col-sm-12 margin-top-5 margin-bottom-0">
+                                <strong class="visible-xs visible-sm strong_modal">
+                                    Data nascimento:
+                                </strong>
+                                <span ng-bind="cliente.dataNascimento | date:'dd/MM/yyyy'"></span>
+                            </p>
+
+                            <div class="col-md-3 col-md-offset-0 col-xs-7 col-sm-7 col-xs-offset-5 offset-0-left">
+                                <div class="btn-group btn-group-sm pull-right" role="group">
+                                    <button type="button" class="btn btn-default font-13" ng-click="clienteListagemCtrl.exibirCliente(cliente)">
+                                        Editar
+                                    </button>
+                                    <button type="button" class="btn btn-default font-13" ng-click="clienteListagemCtrl.removerCliente(cliente)">
+                                        Excluir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <p ng-if="clienteListagemCtrl.clientes.length > 0" class="text-right">
+                Exibindo <span ng-bind="(clienteListagemCtrl.clientes | filter:pesquisa).length"></span> registros de <span ng-bind="clienteListagemCtrl.clientes.length"></span>
+            </p>
+        </div>
     </div>
-  </div>
-</form>
+</div>

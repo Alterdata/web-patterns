@@ -1,11 +1,3 @@
-/* Usado quando temos a busca retrátil no topo */
-/*.box_busca_menu {
-    float: left;
-    width: 100%;
-    border-top: 1px solid #e7e7e7;
-    padding-top: 10px;
-}*/
-
 .box_busca_menu {
     float: left;
     padding-top: 10px;
@@ -14,7 +6,7 @@
 header {
     float: left;
     width: 100%;
-    background-color: #00a6c9;
+    background-color: #44b08a;
     font-size: 14px;
     -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.26);
     box-shadow: 0 3px 5px rgba(0,0,0,0.26);
@@ -84,9 +76,8 @@ header {
 }
 
 .ul_usuario {
-    border-left: 1px solid #72ccd9;
-    border-right: 1px solid #72ccd9;
-    /*margin: 0 15px 0 15px;*/
+    border-left: 1px solid #4ebb95;
+    border-right: 1px solid #4ebb95;
     margin: 0 0 0 15px;
 }
 
@@ -96,10 +87,21 @@ header {
 
 /*------Navbar do header--------*/
 .navbar-default.navbar-default-pcp {
-    background: #00a6c9;
+    background: #44b08a;
 }
 
 .btn-sair-menu-top {
     float: right;
     margin-right: 9px;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
+{
+    background-color: #44b08a!important;
+}
+
+/*------------------Manipula a cor da font do menu superior---------------------*/
+.navbar-default .navbar-nav > li > a
+{
+    color: #ffffff!important;
 }

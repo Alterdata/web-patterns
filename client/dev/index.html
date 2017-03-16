@@ -9,28 +9,24 @@
   <meta name="description" content="My awesome application">
   <meta name="keywords" content="Todo,myAwesomeApp,App">
   <meta name="author" content="Author">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300" rel="stylesheet">
   <link rel="shortcut icon" type="image/ico" href="./favicon.png" />
   <link type="text/css" rel="stylesheet" href="./bower_components/fontawesome/css/font-awesome.min.css?rev=@@hash" />
   <link type="text/css" rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css?rev=@@hash" />
   <link type="text/css" rel="stylesheet" href="./comum/styles/header.css?rev=@@hash" />
+  <link type="text/css" rel="stylesheet" href="./comum/styles/footer.css?rev=@@hash" />
   <link type="text/css" rel="stylesheet" href="./comum/styles/app.css?rev=@@hash" />
-
-  <title>ng1 2do</title>
-  <link rel="shortcut icon" type="image/ico" href="./favicon.png" />
-
-  <link type="text/css" rel="stylesheet" href="./bower_components/fontawesome/css/font-awesome.min.css?rev=@@hash" />
-  <link type="text/css" rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css?rev=@@hash" />
-  <link type="text/css" rel="stylesheet" href="./comum/styles/geral.css?rev=@@hash" />
 </head>
 
-<body>
+<body ng-class="{'menu-mobile-visivel':false}">
   <header class="hidden-print">
     <div class="container-fluid">
       <div class="navbar-default navbar-default-pcp" role="navigation">
         <div class="col-md-2 col-sm-11 col-xs-10">
           <a href="./principal.html#/">
-            <img src="comum/images/logo.png" alt="Alterdata Wise PCP" title="Alterdata Wise PCP" border="0" class="img-logo-header" />
+            <img src="comum/images/bimerupinterna.png" alt="Alterdata Wise PCP" title="Alterdata Wise PCP" border="0" class="img-logo-header"
+            />
           </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse visible-md visible-lg">
@@ -41,8 +37,8 @@
               </li>
               <li role="presentation" class="dropdown text-center">
                 <a class="dropdown-toggle" href="#" role="button" aria-expanded="false">
-                                    Cadastros <span class="caret"></span>
-                                </a>
+                  Cadastros <span class="caret"></span>
+                </a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#/clientes">Clientes</a></li>
                 </ul>
@@ -51,23 +47,21 @@
                 <a href="" title="Ajuda" alt="Ajuda">Ajuda</a>
               </li>
             </ul>
-            <button type="button" class="retira_borda hide btn btn-primary visible-xs visible-sm btn-block">
+            <button type="button" class="retira_borda btn btn-primary visible-xs visible-sm">
                 SAIR
             </button>
           </nav>
 
           <div class="col-md-4 col-sm-4 col-xs-12 offset-0-left offset-0-right">
             <a href="http://help.alterdata.com.br/display/WISEPCP/Wise+PCP" target="_blank" class="link_icones_top hidden-xs hidden-sm">
-              <img src="images/icones/24x24/ajuda_mono.png" width="24" height="24" border="0" alt="Ajuda" title="Ajuda" />
+              <img src="comum/images/icones/24x24/ajuda_mono.png" width="24" height="24" border="0" alt="Ajuda" title="Ajuda" />
             </a>
             <ul class="ul_usuario nav navbar-nav hidden-xs hidden-sm  pull-right">
               <li role="presentation" class="dropdown">
                 <a href="#" class="dropdown-toggle" role="button" data-target="#teste1" aria-expanded="false">
-                  <img ng-src="{{rootCtrl.getAvatar()}}" width="24" height="24" border="0" alt="Usuário" title="Usuário" class="avatar-usuario"
-                    ng-if="rootCtrl.usuarioSemAvatar == false" />
-                  <img src="images/icones/24x24/usuario_mono.png" width="24" height="24" border="0" alt="Usuário" title="Usuário" class="avatar-usuario"
-                    ng-if="rootCtrl.usuarioSemAvatar == true" />
-                  <!--<span class="usuario" ng-bind="rootCtrl.getUsuario()"></span>--><span class="caret"></span>
+                  <img src="comum/images/icones/24x24/usuario_mono.png" width="24" height="24" border="0" alt="Usuário" title="Usuário" class="avatar-usuario"
+                  />
+                  <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right" role="menu" id="teste1">
                   <li>
@@ -106,7 +100,7 @@
     <div class="container-fluid">
       <section class="row">
         <!-- ******************** Menu Mobile ********************** -->
-        <div ng-class="{'menu-mobile-visivel':rootCtrl.menuMobileVisivel}" class="menu-mobile hidden-print">
+        <div ng-class="{'menu-mobile-visivel':rootCtrl.menuMobileVisivel}" class="menu-mobile hidden-print hide">
           <div class="logo-menu-mobile col-xs-12">
             <a href="./principal.html" ng-click="rootCtrl.ativaMenuMobile()">
               <img src="images/logo_wise_230.png" alt="Alterdata Wise PCP" title="Alterdata Wise PCP" border="0" />
@@ -114,90 +108,20 @@
           </div>
           <ul class="nav nav-pills nav-stacked ul-menu-mobile">
 
-            <li class="sub-categoria-menu" ng-if="rootCtrl.validarAcesso('perfil.acessar',
-                                                          'usuario.acessar',
-                                                          'setor.acessar',
-                                                          'centroproducao.acessar',
-                                                          'especialidade.acessar',
-                                                          'operador.acessar',
-                                                          'generoequipamento.acessar',
-                                                          'equipamento.acessar',
-                                                          'unidade.acessar',
-                                                          'produto.acessar',
-                                                          'operacao.acessar',
-                                                          'custoindiretoproducao.acessar',
-                                                          'referencia.acessar',
-                                                          'roteiroproducao.acessar',
-                                                          'fichatecnica.acessar')">Cadastros</li>
+            <li class="sub-categoria-menu">Cadastros</li>
 
-            <li class="li-menu-mobile"><a href="#/perfis" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('perfil.acessar')">Perfis</a></li>
-            <li class="li-menu-mobile"><a href="#/usuarios" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('usuario.acessar')">Usuários</a></li>
-            <li class="li-menu-mobile"><a href="#/setores" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('setor.acessar')">Setores</a></li>
-            <li class="li-menu-mobile"><a href="#/centroProducao" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('centroproducao.acessar')">Centros de produção </a></li>
-            <li class="li-menu-mobile"><a href="#/especialidades" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('especialidade.acessar')">Especialidades</a></li>
-            <li class="li-menu-mobile"><a href="#/operadores" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('operador.acessar')">Operadores</a></li>
-            <li class="li-menu-mobile"><a href="#/generoequipamentos" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('generoequipamento.acessar')">Gêneros de equipamentos</a></li>
-            <li class="li-menu-mobile"><a href="#/equipamentos" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('equipamento.acessar')">Equipamentos</a></li>
-            <li class="li-menu-mobile"><a href="#/unidade" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('unidade.acessar')">Unidades</a></li>
-            <li class="li-menu-mobile"><a href="#/produtos" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('produto.acessar')">Produtos</a></li>
-            <li class="li-menu-mobile"><a href="#/operacoes" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('operacao.acessar')">Operações</a></li>
-            <li class="li-menu-mobile"><a href="#/custosIndiretosDeProducao" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('custoindiretoproducao.acessar')">Custos indiretos de produção</a></li>
-            <li class="li-menu-mobile"><a href="#/referencias" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('referencia.acessar')">Referências</a></li>
-            <li class="li-menu-mobile"><a href="#/roteiroProducao" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('roteiroproducao.acessar')">Roteiros de produção</a></li>
-            <li class="li-menu-mobile"><a href="#/fichaTecnica" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('fichatecnica.acessar')">Fichas técnicas</a></li>
-
-            <li class="sub-categoria-menu" ng-if="rootCtrl.validarAcesso('pedidoproducao.acessar',
-                                                          'gerarordemproducaomanual.acessar',
-                                                          'gerarordemproducaopedido.acessar',
-                                                          'gerarordemproducaobeneficiamento.acessar',
-                                                          'planejamentoproducao.acessar',
-                                                          'requisicaomaterial.acessar',
-                                                          'separacaomaterial.acessar',
-                                                          'inicioproducao.acessar',
-                                                          'apontamentoproducao.acessar',
-                                                          'reporteproducao.acessar',
-                                                          'consultarordem.acessar',
-                                                          'relatorioproducao.acessar',
-                                                          'relatorioordemproducao.acessar')">Produção</li>
-
-            <li class="li-menu-mobile"><a href="#/pedidos" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('pedidoproducao.acessar')">Pedidos de produção</a></li>
-            <li class="li-menu-mobile"><a href="#/gerarOrdemProducaoManual" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('gerarordemproducaomanual.acessar')">Gerar ordens de produção manual</a></li>
-            <li class="li-menu-mobile"><a href="#/gerarOrdemProducaoPorPedido" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('gerarordemproducaopedido.acessar')">Gerar ordens de produção por pedido</a></li>
-            <li class="li-menu-mobile"><a href="#/gerarOrdemProducaoPorBeneficiamento" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('gerarordemproducaobeneficiamento.acessar')">Gerar ordens de produção por beneficiamento</a></li>
-            <li class="li-menu-mobile"><a href="#/planejamentosDeProducao" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('planejamentoproducao.acessar')">Planejamentos de produção</a></li>
-            <!--<li class="li-menu-mobile"><a href="#/requisicaoMateriais" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('requisicaomaterial.acessar')">Requisição de materiais</a></li>-->
-            <li class="li-menu-mobile"><a href="#/separacaoMateriais" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('separacaomaterial.acessar')">Separação de materiais</a></li>
-            <li class="li-menu-mobile"><a href="#/apontamentoProducao/inicio" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('inicioproducao.acessar')">Início de produção</a></li>
-            <li class="li-menu-mobile"><a href="#/apontamentoProducao" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('apontamentoproducao.acessar')">Apontamento de produção</a></li>
-            <li class="li-menu-mobile"><a href="#/apontamentoProducao/reporte" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('reporteproducao.acessar')">Reporte de produção</a></li>
-
-            <li class="sub-categoria-menu" ng-if="rootCtrl.validarAcesso('consultarordem.acessar',
-                                                           'consultaproducao.acessar',
-                                                           'consultaproducao.acessar',
-                                                           'consultaestoqueproduto.acessar')">Consultas</li>
-
-            <li class="li-menu-mobile"><a href="#/ordensDeProducao" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('consultarordem.acessar')">Consulta de ordens de produção</a></li>
-            <li class="li-menu-mobile"><a href="#/relatoriosProducaoDiaria" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('relatorioproducao.acessar')">Consulta de produção diária</a></li>
-            <li class="li-menu-mobile" role="presentation"><a href="#/consultaDeDocumentos" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('configuracao.acessar')">Consulta de documentos</a></li>
-            <li class="li-menu-mobile" role="presentation"><a href="#/consultaDeDocumentos" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('configuracao.acessar')">Consulta de estoque por produto</a></li>
+            <li class="li-menu-mobile"><a href="#/clientes" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('perfil.acessar')">Perfis</a></li>
 
 
             <li class="sub-categoria-menu" ng-if="rootCtrl.validarAcesso('configuracao.acessar')">Opções</li>
-
-            <li role="presentation"><a href="#/configuracao" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('configuracao.acessar')">Configurações</a></li>
-            <li role="presentation"><a href="#/relacaoDeOcorrencias" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('configuracao.acessar')">Relação de ocorrências</a></li>
-            <li role="presentation" ng-if="!rootCtrl.sistemaIntegrado"><a href="#/alinhamentoDeSaldos" ng-click="rootCtrl.ativaMenuMobile()" ng-if="rootCtrl.validarAcesso('configuracao.acessar')">Alinhamento de saldos</a></li>
-            <li role="presentation"><a href="#/sobre" ng-click="rootCtrl.ativaMenuMobile()">Sobre o WisePCP</a></li>
+            <li role="presentation"><a href="#/sobre" ng-click="rootCtrl.ativaMenuMobile()">Sobre o WebPatterns</a></li>
 
             <li role="presentation">
               <button type="button" class="btn-sair-menu-top btn btn-padrao-pcp btn-block margin-bottom-15" ng-click="rootCtrl.signOut()">Sair</button>
             </li>
 
-
-
           </ul>
         </div>
-        <!--********************Fim Menu Mobile**********************-->
         <div ng-view="">
         </div>
       </section>
