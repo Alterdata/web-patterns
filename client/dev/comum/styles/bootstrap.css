@@ -1,0 +1,9 @@
+.container-fluid {
+    padding-right: 0!important;
+    padding-left: 0!important;
+}
+
+.btn-primary {
+    background-color: #628b83;
+    border-color: #628b83;
+}

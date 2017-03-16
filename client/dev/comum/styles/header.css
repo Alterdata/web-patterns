@@ -6,10 +6,10 @@
 header {
     float: left;
     width: 100%;
-    background-color: #44b08a;
+    background-color: #00785f;
     font-size: 14px;
-    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.26);
-    box-shadow: 0 3px 5px rgba(0,0,0,0.26);
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.26);
     z-index: 111;
     position: fixed;
 }
@@ -18,7 +18,6 @@ header {
     width: 153px;
     margin-top: 10px;
 }
-
 
 .badge.num-notificacao {
     top: -15px;
@@ -37,11 +36,10 @@ header {
     color: #ffffff;
 }
 
-.dropdown-menu-notificacao{
+.dropdown-menu-notificacao {
     top: 115%;
     right: -13px;
 }
-
 
 .nav_header {
     float: left;
@@ -58,7 +56,7 @@ header {
     margin-top: 11px;
 }
 
-.fa.i-notificacao{
+.fa.i-notificacao {
     color: #ffffff;
     font-size: 24px;
 }
@@ -76,8 +74,8 @@ header {
 }
 
 .ul_usuario {
-    border-left: 1px solid #4ebb95;
-    border-right: 1px solid #4ebb95;
+    border-left: 1px solid #00785f;
+    border-right: 1px solid #00785f;
     margin: 0 0 0 15px;
 }
 
@@ -85,9 +83,11 @@ header {
     text-transform: uppercase;
 }
 
+
 /*------Navbar do header--------*/
+
 .navbar-default.navbar-default-pcp {
-    background: #44b08a;
+    background: #00785f;
 }
 
 .btn-sair-menu-top {
@@ -95,13 +95,15 @@ header {
     margin-right: 9px;
 }
 
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
-{
-    background-color: #44b08a!important;
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+    background-color: #00785f!important;
 }
 
+
 /*------------------Manipula a cor da font do menu superior---------------------*/
-.navbar-default .navbar-nav > li > a
-{
+
+.navbar-default .navbar-nav>li>a {
     color: #ffffff!important;
 }

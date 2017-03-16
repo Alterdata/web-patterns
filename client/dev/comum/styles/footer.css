@@ -1,5 +1,4 @@
-.footer
-{
+.footer {
     clear: both;
     position: absolute;
     bottom: 0;
@@ -9,7 +8,7 @@
     font-size: 12px;
     line-height: normal;
     background: #96aaaf;
-    border-top: 2px solid #44b08a;
+    border-top: 2px solid #14a08c;
     -webkit-transition: all 0.8s ease;
     -moz-transition: all 0.8s ease;
     -o-transition: all 0.8s ease;
@@ -40,12 +39,12 @@
     padding-bottom: 0;
 }
 
-.links_footer:hover, .links_footer:focus{
+.links_footer:hover,
+.links_footer:focus {
     color: #FFFFFF;
 }
 
-.img-logo-footer
-{
+.img-logo-footer {
     margin-left: 10px;
     margin-top: 9px;
 }
