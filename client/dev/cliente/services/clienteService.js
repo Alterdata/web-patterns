@@ -1,36 +1,43 @@
-; (function (ng) {
-  'use strict';
+;
+(function(ng) {
+    'use strict';
 
-  ng.module('web-patterns')
-    .service('$clienteService', [
-      '$clienteResource',
-      function ClienteServiceFn($clienteResource) {
-        class ClienteService {
-          constructor() {
-          }
+    ng.module('web-patterns')
+        .service('$clienteService', [
+            '$clienteResource',
+            function ClienteServiceFn($clienteResource) {
+                class ClienteService {
+                    constructor() {}
 
-          atualizar(cliente) {
-            return $clienteResource.atualizar(cliente.id, { clienteContrato: cliente }).$promise;
-          }
+                    salvar(cliente) {
+                        if (cliente.id)
+                            return this.atualizar(cliente)
+                        else
+                            return this.adicionar(cliente);
+                    }
 
-          adicionar(cliente) {
-            return $clienteResource.adicionar({ clienteContrato: cliente }).$promise;
-          }
+                    atualizar(cliente) {
+                        return $clienteResource.atualizar({ 'id': cliente.id }, cliente).$promise;
+                    }
 
-          obterTodos() {
-            return $clienteResource.obterTodos().$promise;
-          }
+                    adicionar(cliente) {
+                        return $clienteResource.adicionar(cliente).$promise;
+                    }
 
-          obterPorId(id) {
-            return $clienteResource.obterPorId(id).$promise;
-          }
+                    obterTodos() {
+                        return $clienteResource.obterTodos().$promise;
+                    }
 
-          remover(cliente) {
-            return $clienteResource.remover(cliente.id).$promise;
-          }
-        }
+                    obterPorId(id) {
+                        return $clienteResource.obterPorId(id).$promise;
+                    }
 
-        return new ClienteService();
-      }
-    ]);
+                    remover(cliente) {
+                        return $clienteResource.remover(cliente.id).$promise;
+                    }
+                }
+
+                return new ClienteService();
+            }
+        ]);
 }(window.angular));

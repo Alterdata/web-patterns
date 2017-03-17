@@ -1,21 +1,23 @@
-;(function(ng) {
-  'use strict';
+;
+(function(ng) {
+    'use strict';
 
-  ng.module('web-patterns')
-    .factory('ClienteModel', [
-      function ClienteModelFn() {
-        class ClienteModel {
-          constructor() {
-            this.nome = '';
-            this.dataNascimento = null;
-          }
+    ng.module('web-patterns')
+        .factory('ClienteModel', [
+            function ClienteModelFn() {
+                class ClienteModel {
+                    constructor() {
+                        this.id = '';
+                        this.nome = '';
+                        this.dataNascimento = new Date();
+                    }
 
-          verificarSeValido() {
-            return !!this.nome && !!this.dataNascimento;
-          }
-        }
+                    verificarSeValido() {
+                        return !!this.nome && !!this.dataNascimento;
+                    }
+                }
 
-        return ClienteModel;
-      }
-    ]);
+                return ClienteModel;
+            }
+        ]);
 }(window.angular));

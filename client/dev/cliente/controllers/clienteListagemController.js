@@ -1,25 +1,39 @@
-; (function (ng) {
-  'use strict';
+;
+(function(ng) {
+    'use strict';
 
-  ng.module('web-patterns')
-    .controller('ClienteListagemController', [
-      '$clienteService',
-      function ClienteListagemControllerFn($clienteService) {
-        class ClienteListagemController {
-          constructor() {
-            var self = this;
+    ng.module('web-patterns')
+        .controller('ClienteListagemController', [
+            '$location',
+            '$clienteService',
+            function ClienteListagemControllerFn($location, $clienteService) {
+                class ClienteListagemController {
+                    constructor() {
+                        var self = this;
 
-            $clienteService.obterTodos().then(
-              function(data) {
-                self.clientes = data;
-              }
-            );
+                        $clienteService.obterTodos().then(
+                            function(data) {
+                                self.clientes = data;
+                            }
+                        );
 
-            return self;
-          }
-        }
+                        return self;
+                    }
 
-        return new ClienteListagemController();
-      }
-    ]);
+                    novoCliente() {
+                        $location.url('/clientes/novo');
+                    }
+
+                    exibirCliente(cliente) {
+                        $location.url('/clientes/' + cliente.id);
+                    }
+
+                    removerCliente(cliente) {
+                        $clienteService.remover({ 'id': cliente.id });
+                    }
+                }
+
+                return new ClienteListagemController();
+            }
+        ]);
 }(window.angular));

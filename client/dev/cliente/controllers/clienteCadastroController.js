@@ -1,37 +1,50 @@
-; (function (ng) {
-  'use strict';
+;
+(function(ng) {
+    'use strict';
 
-  ng.module('web-patterns')
-    .controller('ClienteCadastroController', [
-      '$clienteService',
-      'ClienteModel',
-      function ClienteCadastroControllerFn($clienteService, ClienteModel) {
-        class ClienteCadastroController {
-          constructor() {
-            var self = this;
+    ng.module('web-patterns')
+        .controller('ClienteCadastroController', [
+            '$routeParams',
+            '$location',
+            '$clienteService',
+            'ClienteModel',
+            function ClienteCadastroControllerFn($routeParams, $location, $clienteService, ClienteModel) {
+                class ClienteCadastroController {
+                    constructor() {
+                        var self = this;
 
-            $clienteService.obterTodos().then(
-              function (data) {
-                self.clientes = data;
-              });
+                        self.cliente = new ClienteModel();
+                        self.novoCliente = true;
 
-            self.cliente = new ClienteModel();
-            self.cliente.name = 'Juca';
-            self.cliente.birthDate = new Date(1984, 3, 26);
+                        if ($routeParams.id && $routeParams.id != 'novo') {
+                            debugger;
+                            $clienteService.obterPorId({ 'id': $routeParams.id }).then(
+                                function(data) {
+                                    self.novoCliente = false;
+                                    self.cliente.id = data.id;
+                                    self.cliente.nome = data.nome;
+                                    self.cliente.dataNascimento = new Date(data.dataNascimento);
+                                });
+                        }
 
-            return self;
-          }
+                        return self;
+                    }
 
-          salvar(cliente) {
-            $clienteService.salvar(cliente);
-          }
+                    salvar(cliente) {
+                        debugger;
+                        $clienteService.salvar(cliente)
+                            .then(function(data) {
+                                alert('sucesso');
+                                $location.url('/clientes');
+                            });
+                    }
 
-          carregarTodos() {
-            $clienteService.obterTodos();
-          }
-        }
+                    cancelar() {
+                        $location.url('/clientes');
+                    }
+                }
 
-        return new ClienteCadastroController();
-      }
-    ]);
+                return new ClienteCadastroController();
+            }
+        ]);
 }(window.angular));
