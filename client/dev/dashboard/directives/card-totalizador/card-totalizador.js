@@ -22,7 +22,8 @@
                     'classePrimaria': '@',
                     'classeSecundaria': '@',
                     'cliqueTotalizador': '&',
-                    'icone': '@'
+                    'icone': '@',
+                    'descricao': '@'
                 };
                 var _replace = true;
 
