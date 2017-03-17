@@ -17,6 +17,11 @@
     padding-right: 25px;
 }
 
+.padding-zero {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .card-dashboard {
     margin-bottom: 20px;
     border: 0;
@@ -81,6 +86,16 @@
     background-color: #df8742;
     color: #ffffff !important;
     border-radius: 4px;
+}
+
+.bg-amarelo {
+    background-color: rgb(174, 111, 5);
+    color: #ffffff !important;
+}
+
+.bg-amarelo-escuro {
+    background-color: rgb(143, 91, 3);
+    color: #ffffff !important;
 }
 
 .selecao-totalizador {

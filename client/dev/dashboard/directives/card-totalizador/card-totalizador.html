@@ -1,8 +1,8 @@
-<div class="col-lg-3 col-sm-6">
-    <div class="card-dashboard panel {{totalizadorCtrl.classePrimaria}}" ng-click="totalizadorCtrl.selecionarPedidos()">
+<div class="col-lg-12 col-sm-6 padding-zero">
+    <div class="card-dashboard panel {{totalizadorCtrl.classeSecundaria}}" ng-click="totalizadorCtrl.selecionarPedidos()">
         <div class="row row-table selecao-totalizador">
-            <div class="col-xs-4 text-center {{totalizadorCtrl.classeSecundaria}} ajusta-padding-card-dashboard">
-                <em class="icon-dashboard fa fa-folder-open-o fa-3x"></em>
+            <div class="col-xs-4 text-center {{totalizadorCtrl.classePrimaria}} ajusta-padding-card-dashboard">
+                <em class="icon-dashboard fa {{totalizadorCtrl.icone}} fa-3x"></em>
             </div>
             <div class="col-xs-8 ajusta-padding-card-dashboard">
                 <div class="numero-card margin-top-0">{{totalizadorCtrl.quantidade}}</div>

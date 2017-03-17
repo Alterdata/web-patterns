@@ -21,7 +21,8 @@
                     'quantidade': '@',
                     'classePrimaria': '@',
                     'classeSecundaria': '@',
-                    'cliqueTotalizador': "&"
+                    'cliqueTotalizador': '&',
+                    'icone': '@'
                 };
                 var _replace = true;
 
