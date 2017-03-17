@@ -1,41 +1,41 @@
-;
-(function(ng) {
+; (function (ng) {
     'use strict';
 
     ng.module('web-patterns')
         .directive('cardTotalizador', [
-            function() {
-                var _controller = [
+            function () {
+                var ctrl = [
                     '$scope',
-                    function($scope) {
-                        this.selecionarPedidos = function() {
-                            if ($scope.totalizadorCtrl.cliqueTotalizador)
+                    function ($scope) {
+                        this.selecionarPedidos = function () {
+                            if ($scope.totalizadorCtrl.cliqueTotalizador) {
                                 $scope.totalizadorCtrl.cliqueTotalizador({ 'identificador': $scope.totalizadorCtrl.id });
-                        }
+                            }
+                        };
                     }
                 ];
 
-                var _restrict = 'EA';
-                var _scope = {
-                    'id': '@',
-                    'quantidade': '@',
-                    'classePrimaria': '@',
-                    'classeSecundaria': '@',
-                    'cliqueTotalizador': '&',
-                    'icone': '@',
-                    'descricao': '@'
-                };
-                var _replace = true;
+                class CardTotalizador {
+                    constructor(controller) {
+                        this.restrict = 'EA';
+                        this.replace = true;
+                        this.templateUrl = './dashboard/directives/card-totalizador/card-totalizador.html';
+                        this.controllerAs = 'totalizadorCtrl';
+                        this.bindToController = true;
+                        this.controller = controller;
+                        this.scope = {
+                            'id': '@',
+                            'quantidade': '@',
+                            'classePrimaria': '@',
+                            'classeSecundaria': '@',
+                            'cliqueTotalizador': '&',
+                            'icone': '@',
+                            'descricao': '@'
+                        };
+                    }
+                }
 
-                return {
-                    restrict: _restrict,
-                    templateUrl: './dashboard/directives/card-totalizador/card-totalizador.html',
-                    controllerAs: 'totalizadorCtrl',
-                    bindToController: true,
-                    replace: _replace,
-                    scope: _scope,
-                    controller: _controller
-                };
+                return new CardTotalizador(ctrl);
             }
         ]);
 }(window.angular));
