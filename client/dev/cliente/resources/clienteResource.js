@@ -1,5 +1,4 @@
-;
-(function(ng) {
+; (function (ng) {
     'use strict';
 
     ng.module('web-patterns')

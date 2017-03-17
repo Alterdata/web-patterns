@@ -1,5 +1,4 @@
-;
-(function(ng) {
+; (function (ng) {
     'use strict';
 
     ng.module('web-patterns')
@@ -12,7 +11,7 @@
                         var self = this;
 
                         $clienteService.obterTodos().then(
-                            function(data) {
+                            function (data) {
                                 self.clientes = data;
                             }
                         );

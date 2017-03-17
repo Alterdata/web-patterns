@@ -1,5 +1,4 @@
-;
-(function(ng) {
+; (function (ng) {
     'use strict';
 
     ng.module('web-patterns')
@@ -7,7 +6,7 @@
             '$clienteResource',
             function ClienteServiceFn($clienteResource) {
                 class ClienteService {
-                    constructor() {}
+                    constructor() { }
 
                     salvar(cliente) {
                         if (cliente.id)

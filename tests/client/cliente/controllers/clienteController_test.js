@@ -1,8 +1,8 @@
 'use strict';
 
 describe('ClienteCadastroController', function () {
-  var _scope;
-  var CONTROLLER_NAME = 'ClienteCadastroController as clienteCadastroctrl';
+  let _scope;
+  const CONTROLLER_NAME = 'ClienteCadastroController as clienteCadastroctrl';
 
   beforeEach(module('web-patterns'));
 

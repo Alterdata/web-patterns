@@ -1,11 +1,11 @@
 'use strict';
 
-describe('ClienteModel', function() {
-  var _clienteModel;
+describe('ClienteModel', function () {
+  let _clienteModel;
 
   beforeEach(module('web-patterns'));
 
-  beforeEach(inject(function($injector) {
+  beforeEach(inject(function ($injector) {
     _clienteModel = $injector.get('ClienteModel');
   }));
 });

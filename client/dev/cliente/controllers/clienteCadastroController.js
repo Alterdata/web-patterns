@@ -1,5 +1,4 @@
-;
-(function(ng) {
+; (function (ng) {
     'use strict';
 
     ng.module('web-patterns')
@@ -19,7 +18,7 @@
                         if ($routeParams.id && $routeParams.id != 'novo') {
                             debugger;
                             $clienteService.obterPorId({ 'id': $routeParams.id }).then(
-                                function(data) {
+                                function (data) {
                                     self.novoCliente = false;
                                     self.cliente.id = data.id;
                                     self.cliente.nome = data.nome;
@@ -33,7 +32,7 @@
                     salvar(cliente) {
                         debugger;
                         $clienteService.salvar(cliente)
-                            .then(function(data) {
+                            .then(function (data) {
                                 alert('sucesso');
                                 $location.url('/clientes');
                             });

@@ -29,7 +29,8 @@
                         <p class="p-grid-vazia">Nenhum perfil encontrado.</p>
                     </div>
 
-                    <li class="list-group-item" ng-repeat="cliente in clienteListagemCtrl.clientes | filter: pesquisa | orderBy: 'nome' track by $index" ng-class-odd="'cor-zebrado1'" ng-class-even="'cor-zebrado2'">
+                    <li class="list-group-item" ng-repeat="cliente in clienteListagemCtrl.clientes | filter: pesquisa | orderBy: 'nome' track by $index"
+                        ng-class-odd="'cor-zebrado1'" ng-class-even="'cor-zebrado2'">
                         <div class="row">
                             <p class="col-md-3 col-xs-12 col-sm-12 margin-top-5 margin-bottom-0">
                                 <strong class="visible-xs visible-sm strong_modal">
@@ -60,7 +61,9 @@
                 </ul>
             </div>
             <p ng-if="clienteListagemCtrl.clientes.length > 0" class="text-right">
-                Exibindo <span ng-bind="(clienteListagemCtrl.clientes | filter:pesquisa).length"></span> registros de <span ng-bind="clienteListagemCtrl.clientes.length"></span>
+                Exibindo <span ng-bind="(clienteListagemCtrl.clientes | filter:pesquisa).length"></span> registros de
+                <span
+                    ng-bind="clienteListagemCtrl.clientes.length"></span>
             </p>
         </div>
     </div>

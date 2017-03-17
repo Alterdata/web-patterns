@@ -1,7 +1,7 @@
 'use strict';
 
 describe('ClienteService', function () {
-  var _clienteService;
+  let _clienteService;
 
   beforeEach(module('web-patterns'));
 
