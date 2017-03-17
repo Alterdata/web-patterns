@@ -1,4 +1,4 @@
-;(function(ng) {
+; (function (ng) {
     'use strict';
 
     ng.module('web-patterns')
@@ -8,7 +8,7 @@
                     constructor() {
                         return this;
                     }
-                    
+
                     exibirMensagem(identificador) {
                         alert(identificador);
                     }
