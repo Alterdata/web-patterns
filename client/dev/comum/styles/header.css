@@ -28,19 +28,6 @@ header {
     color: #fff;
 }
 
-.setinha-dropdown {
-    margin-top: -11px;
-    position: absolute;
-    z-index: 999;
-    right: 7%;
-    color: #ffffff;
-}
-
-.dropdown-menu-notificacao {
-    top: 115%;
-    right: -13px;
-}
-
 .nav_header {
     float: left;
     margin: 0;
@@ -48,12 +35,6 @@ header {
 
 .nav-tabs {
     border: none;
-}
-
-.notificacao-top {
-    float: right;
-    font-size: 22px;
-    margin-top: 11px;
 }
 
 .fa.i-notificacao {
@@ -67,12 +48,6 @@ header {
     margin: 7px 0 0 15px;
 }
 
-.link_balao_mobile {
-    float: right;
-    font-size: 25px;
-    margin: 21px 30px 0 0;
-}
-
 .ul_usuario {
     border-left: 1px solid #00785f;
     border-right: 1px solid #00785f;
@@ -83,11 +58,18 @@ header {
     text-transform: uppercase;
 }
 
+.btn-usuario-sair {
+    float: right;
+    margin-right: 9px;
+}
 
-/*------Navbar do header--------*/
-
-.navbar-default.navbar-default-pcp {
+.navbar-default.navbar-default-web {
     background: #00785f;
+}
+
+.navbar-default-web {
+    margin-bottom: 0px;
+    border-color: #00785f;
 }
 
 .btn-sair-menu-top {
@@ -101,9 +83,13 @@ header {
     background-color: #00785f!important;
 }
 
-
-/*------------------Manipula a cor da font do menu superior---------------------*/
-
 .navbar-default .navbar-nav>li>a {
     color: #ffffff!important;
+}
+
+@media screen and (min-width: 1250px) {
+    header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }

@@ -1,4 +1,4 @@
-.m-t-20{
+.margin-top-20 {
     margin-top: 20px;
 }
 
@@ -7,4 +7,42 @@
     background-repeat: no-repeat;
     background-position: 98% 8px;
     padding-right: 25px;
+}
+
+.container-aplicacao {
+    padding-top: 50px;
+    width: 100%;
+}
+
+@media screen and (min-width: 1250px) {
+    .container-aplicacao {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .container-aplicacao {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-aplicacao {
+        padding-top: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-aplicacao {
+        padding-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 1250px) and (min-width: 990px) {
+    .container-aplicacao {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }

@@ -14,73 +14,75 @@
     <link rel="shortcut icon" type="image/ico" href="./favicon.png" />
     <link type="text/css" rel="stylesheet" href="./bower_components/fontawesome/css/font-awesome.min.css?rev=@@hash" />
     <link type="text/css" rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css?rev=@@hash" />
+    <link type="text/css" rel="stylesheet" href="./comum/styles/fontes.css?rev=@@hash" />
     <link type="text/css" rel="stylesheet" href="./comum/styles/header.css?rev=@@hash" />
     <link type="text/css" rel="stylesheet" href="./comum/styles/footer.css?rev=@@hash" />
     <link type="text/css" rel="stylesheet" href="./comum/styles/app.css?rev=@@hash" />
     <link type="text/css" rel="stylesheet" href="./comum/styles/bootstrap.css?rev=@@hash" />
 </head>
 
-<body ng-class="{'menu-mobile-visivel':true}">
+<body>
     <header class="hidden-print">
         <div class="container-fluid">
-            <nav class="navbar navbar-default navbar-default-pcp" role="navigation">
-                <div class="col-md-2 col-sm-11 col-xs-10">
-                    <a href="./principal.html#/">
-                        <img src="comum/images/bimerupinterna.png" alt="Alterdata Wise PCP" title="Alterdata Wise PCP" border="0" class="img-logo-header" />
-                    </a>
-                </div>
-                <div id="navbar" class="collapse navbar-collapse visible-md visible-lg">
-                    <div class="nav_header col-md-6 col-sm-12 offset-0-left offset-0-right">
-                        <ul class="nav navbar-nav">
-                            <li class="text-center" class="active">
-                                <a href="./principal.html#/">Dashboard</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#/clientes">Clientes</a></li>
-                                </ul>
-                            </li>
-                            <li class="text-center visible-xs visible-sm">
-                                <a href="" title="Ajuda" alt="Ajuda">Ajuda</a>
-                            </li>
-                        </ul>
-                        <button type="button" class="retira_borda btn btn-primary visible-xs visible-sm">
-                            Sair
+            <nav class="navbar navbar-default navbar-default-web">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <div class="col-xs-1 visible-xs">
+                        </div>
+                        <div class="col-md-2 col-xs-9 col-sm-11">
+                            <a href="./principal.html#/">
+                                <img src="comum/images/bimerupinterna.png" alt="WebPatterns" title="WebPatterns" border="0" class="img-logo-header" />
+                            </a>
+                        </div>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                         </button>
                     </div>
+                    <div id="navbar" class="collapse navbar-collapse">
+                        <div class="nav_header col-md-6 col-sm-12 col-xs-12 offset-0-left offset-0-right">
+                            <ul class="nav navbar-nav">
+                                <li class="active">
+                                    <a href="./principal.html#/">Dashboard</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#/clientes">Clientes</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <div class="col-md-4 col-sm-4 col-xs-12 offset-0-left offset-0-right">
-                        <a href="http://help.alterdata.com.br/display/WISEPCP/Wise+PCP" target="_blank" class="link_icones_top hidden-xs hidden-sm">
-                            <img src="comum/images/icones/24x24/ajuda_mono.png" width="24" height="24" border="0" alt="Ajuda" title="Ajuda" />
-                        </a>
-                        <ul class="ul_usuario nav navbar-nav hidden-xs hidden-sm  pull-right">
-                            <li role="presentation" class="dropdown">
-                                <a href="#" class="dropdown-toggle" role="button" data-target="#teste1" aria-expanded="false">
-                                    <img src="comum/images/icones/24x24/usuario_mono.png" width="24" height="24" border="0" alt="Usuário" title="Usuário" class="avatar-usuario" />
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right" role="menu" id="teste1">
-                                    <li>
-                                        <a href="#"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class=""><strong>Usuário: </strong> <span class="small" ng-bind="rootCtrl.getUsuario()"></span></a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <button type="button" class="btn-sair-menu-top btn btn-padrao-pcp" ng-click="rootCtrl.signOut()">Sair</button>
-                                </ul>
-                            </li>
-                        </ul>
-
-                        <div class="dropdown notificacao-top hidden-xs hidden-sm">
-                            <a href="#" id="configuracaoLabel" role="button" aria-haspopup="true" aria-expanded="false" class="btn-link dropdown-toggle" data-target="#configuracao" title="Opções">
-                                <i class="fa fa-gear i-notificacao"></i>
+                        <div class="col-md-4 col-sm-4 col-xs-12 offset-0-left offset-0-right">
+                            <a href="https://github.com/Alterdata/web-patterns/wiki" target="_blank" class="link_icones_top hidden-sm hidden-xs">
+                                <img src="comum/images/icones/24x24/ajuda_mono.png" width="24" height="24" border="0" alt="Ajuda" title="Ajuda" />
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-notificacao" role="menu" aria-labelledby="configuracaoLabel" id="configuracao">
-                                <li><span class="glyphicon glyphicon-triangle-top setinha-dropdown"></span></li>
-                                <li role="presentation"><a href="#/configuracao">Configurações</a></li>
-                                <li role="presentation"><a href="#/sobre">Sobre o Wise PCP</a></li>
+                            <ul class="ul_usuario nav navbar-nav pull-right hidden-sm hidden-xs">
+                                <li role="presentation" class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-target="teste1" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <img src="comum/images/icones/24x24/usuario_mono.png" width="24" height="24" border="0" alt="Usuário" title="Usuário" class="avatar-usuario" />
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu" id="teste1">
+                                        <li>
+                                            <a href="#" class=""><strong>Usuário: </strong> <span class="small">Usuário</span></a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <button type="button" class="btn btn-primary btn-usuario-sair pull-right">Sair</button>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav pull-right hidden-sm hidden-xs">
+                                <li role="presentation" class="dropdown">
+                                    <a href="#" role="button" aria-haspopup="true" aria-expanded="false" class="btn-link dropdown-toggle" data-target="configuracao" data-toggle="dropdown" title="Opções">
+                                        <i class="fa fa-gear i-notificacao"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu" id="configuracao">
+                                        <li role="presentation"><a href="#/sobre">Sobre o WebPatterns</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -88,26 +90,9 @@
             </nav>
         </div>
     </header>
-    <section class="aplicacao_geral">
+    <section class="container-aplicacao">
         <div class="container-fluid">
             <section class="row">
-                <!-- ******************** Menu Mobile ********************** -->
-                <div ng-class="{'menu-mobile-visivel':true}" class="menu-mobile hidden-print hide">
-                    <div class="logo-menu-mobile col-xs-12">
-                        <a href="./principal.html">
-                            <img src="images/logo_wise_230.png" alt="Alterdata Wise PCP" title="Alterdata Wise PCP" border="0" />
-                        </a>
-                    </div>
-                    <ul class="nav nav-pills nav-stacked ul-menu-mobile">
-                        <li class="sub-categoria-menu">Cadastros</li>
-                        <li class="li-menu-mobile"><a href="#/clientes">Clientes</a></li>
-                        <li class="sub-categoria-menu">Opções</li>
-                        <li role="presentation"><a href="#/sobre">Sobre o WebPatterns</a></li>
-                        <li role="presentation">
-                            <button type="button" class="btn-sair-menu-top btn btn-padrao-pcp btn-block margin-bottom-15" ng-click="rootCtrl.signOut()">Sair</button>
-                        </li>
-                    </ul>
-                </div>
                 <div ng-view="">
                 </div>
             </section>
