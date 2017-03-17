@@ -7,6 +7,11 @@
             '$routeProvider',
             function($routeProvider) {
                 $routeProvider
+                    .when('/dashboard', {
+                        templateUrl: 'dashboard/templates/dashboard.html',
+                        controller: 'DashboardController',
+                        controllerAs: 'dashboardCtrl'
+                    })
                     .when('/clientes', {
                         templateUrl: 'cliente/templates/cliente-listagem.html',
                         controller: 'ClienteListagemController',
@@ -18,7 +23,7 @@
                         controllerAs: 'clienteCadastroCtrl'
                     })
                     .otherwise({
-                        redirectTo: '/clientes'
+                        redirectTo: '/dashboard'
                     });
             }
         ]);
