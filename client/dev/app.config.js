@@ -1,11 +1,11 @@
-; (function(ng) {
-    'use strict';
+; (function (ng) {
+  'use strict';
 
-    ng.module('web-patterns')
-        .config([
-            '$locationProvider',
-            function($locationProvider) {
-                $locationProvider.html5Mode(true).hashPrefix('*');
-            }
-        ]);
+  ng.module('web-patterns')
+    .config([
+      '$locationProvider',
+      function ($locationProvider) {
+        $locationProvider.html5Mode(true).hashPrefix('*');
+      }
+    ]);
 }(window.angular));

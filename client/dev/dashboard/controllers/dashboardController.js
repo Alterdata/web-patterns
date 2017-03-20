@@ -1,20 +1,21 @@
 ; (function (ng) {
-    'use strict';
+  'use strict';
 
-    ng.module('web-patterns')
-        .controller('DashboardController', [
-            function DashboardControllerFn() {
-                class DashboardController {
-                    constructor() {
-                        return this;
-                    }
+  ng.module('web-patterns')
+    .controller('DashboardController', [
+      function DashboardControllerFn() {
+        class DashboardController {
+          constructor() {
+            let self = this;
+            return self;
+          }
 
-                    exibirMensagem(identificador) {
-                        alert(identificador);
-                    }
-                }
+          exibirMensagem(identificador) {
+            alert(identificador);
+          }
+        }
 
-                return new DashboardController();
-            }
-        ]);
+        return new DashboardController();
+      }
+    ]);
 }(window.angular));

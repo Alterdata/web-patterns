@@ -3,32 +3,24 @@
   "version": "0.0.1",
   "main": "src/web-patterns.js",
   "scripts": {
-    
-      "start": "gulp",
-      "dev": "gulp",
-      "watch": "gulp",
-      "test": "gulp client.unit_test",
-      "build-dist": "gulp client.build:dist"
-      
+    "start": "gulp",
+    "dev": "gulp",
+    "watch": "gulp",
+    "test": "gulp client.unit_test",
+    "build-dist": "gulp client.build:dist"
   },
   "dependencies": {
-    
-      
-       
-       
-       
-  	   "babel-register": "^6.7.2",
-       "babel-regenerator-runtime": "^6.5.0",
-       "babel-preset-es2015": "^6.1.18",
-       "babel-preset-es2016": "^6.0.11",
-       "babel-preset-stage-0": "^6.1.18",
-       "newrelic": "^1.18.2"
+    "babel-register": "^6.7.2",
+    "babel-regenerator-runtime": "^6.5.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-es2016": "^6.0.11",
+    "babel-preset-stage-0": "^6.1.18",
+    "newrelic": "^1.18.2"
   },
   "devDependencies": {
     "aliv": "^1.6.0",
-    "karma-ng-html2js-preprocessor": "^0.1.2",
     "del": "^2.2.1",
-  	"gulp": "^3.9.0",
+    "gulp": "^3.9.0",
     "protractor": "^3.1.0",
     "browser-sync": "^2.5.2",
     "require-dir": "^0.3.0",
@@ -44,8 +36,6 @@
     "gulp-htmlmin": "^2.0.0",
     "gulp-imagemin": "^3.0.1",
     "gulp-util": "^3.0.3",
-    
-    
     "jasmine-core": "^2.2.0",
     "run-sequence": "^1.1.5",
     "karma": "^1.3.0",
@@ -64,7 +54,6 @@
     "istanbul": "^0.4.4",
     "concurrently": "^2.0.0"
   },
-  
   "repository": {
     "type": "git",
     "url": "https://github.com/alterdata/web-patterns.git"

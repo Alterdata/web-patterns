@@ -1,22 +1,34 @@
 ; (function (ng) {
-    'use strict';
+  'use strict';
 
-    ng.module('web-patterns')
-        .factory('ClienteModel', [
-            function ClienteModelFn() {
-                class ClienteModel {
-                    constructor() {
-                        this.id = '';
-                        this.nome = '';
-                        this.dataNascimento = new Date();
-                    }
+  ng.module('web-patterns')
+    .factory('ClienteModel', [
+      function ClienteModelFn() {
+        class ClienteModel {
+          constructor() {
+            var self = this;
 
-                    verificarSeValido() {
-                        return !!this.nome && !!this.dataNascimento;
-                    }
-                }
+            self.id = undefined;
+            self.nome = '';
+            self.__dataNascimento = undefined;
 
-                return ClienteModel;
-            }
-        ]);
+            return self;
+          }
+
+          static verificarSeValido(cliente) {
+            return !!cliente.nome && !!cliente.dataNascimento;
+          }
+
+          get dataNascimento() {
+            return this.__dataNascimento;
+          }
+
+          set dataNascimento(dataNascimento) {
+            this.__dataNascimento = dataNascimento;
+          }
+        }
+
+        return ClienteModel;
+      }
+    ]);
 }(window.angular));

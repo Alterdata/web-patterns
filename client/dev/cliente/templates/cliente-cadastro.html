@@ -1,24 +1,24 @@
 <div class="col-lg-10 col-lg-offset-1">
-    <ol class="breadcrumb margin-top-20 hidden-xs" ng-if="!clienteCadastroCtrl.novoCliente">
-        <li><a href="#/clientes">Cliente</a></li>
-        <li class="active">cliente <span ng-bind="clienteCadastroCtrl.cliente.id"></span></li>
-    </ol>
-    <h1 class="h1-web margin-top-50" ng-class="{'margin-top-50':clienteCadastroCtrl.novoCliente}">Cadastro de cliente</h1>
+  <ol class="breadcrumb margin-top-20 hidden-xs" ng-if="!clienteCadastroCtrl.novoCliente">
+    <li><a href="/clientes">Cliente</a></li>
+    <li class="active">cliente <span ng-bind="clienteCadastroCtrl.cliente.id"></span></li>
+  </ol>
+  <h1 class="h1-web margin-top-50" ng-class="{'margin-top-50':clienteCadastroCtrl.novoCliente}">Cadastro de cliente</h1>
 </div>
 
 <div class="col-lg-10 col-lg-offset-1">
-    <form name="cliente-cadastro" class="form-horizontal">
-        <div class="col-sm-12 col-xs-12 margin-top-20">
-            <label for="nome" class="font-weight-500">Nome</label>
-            <input id="nome" name="nome" type="text" class="form-control" ng-model="clienteCadastroCtrl.cliente.nome">
-        </div>
-        <div class="col-sm-12 col-xs-12 margin-top-20">
-            <label for="dataNascimento" class="font-weight-500">Data de nascimento</label>
-            <input id="dataNascimento" name="dataNascimento" type="date" class="form-control" ng-model="clienteCadastroCtrl.cliente.dataNascimento">
-        </div>
-        <div class="col-sm-offset-2 col-sm-10 margin-top-20 text-right">
-            <button class="btn btn-primary" ng-click="clienteCadastroCtrl.salvar(clienteCadastroCtrl.cliente)">Salvar</button>
-            <button class="btn btn-default" ng-click="clienteCadastroCtrl.cancelar()">Cancelar</button>
-        </div>
-    </form>
+  <form name="cliente-cadastro" class="form-horizontal">
+    <div class="col-sm-12 col-xs-12 margin-top-20">
+      <label for="nome" class="font-weight-500">Nome</label>
+      <input id="nome" name="nome" type="text" class="form-control" ng-model="clienteCadastroCtrl.cliente.nome">
+    </div>
+    <div class="col-sm-12 col-xs-12 margin-top-20">
+      <label for="dataNascimento" class="font-weight-500">Data de nascimento</label>
+      <input id="dataNascimento" name="dataNascimento" type="date" class="form-control" ng-model="clienteCadastroCtrl.cliente.dataNascimento">
+    </div>
+    <div class="col-sm-offset-2 col-sm-10 margin-top-20 text-right">
+      <button class="btn btn-primary" ng-click="clienteCadastroCtrl.salvar(clienteCadastroCtrl.cliente)">Salvar</button>
+      <button class="btn btn-default" ng-click="clienteCadastroCtrl.cancelar()">Cancelar</button>
+    </div>
+  </form>
 </div>
