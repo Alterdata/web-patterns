@@ -3,7 +3,7 @@
     "main": "web-patterns.js",
     "version": "0.0.1",
     "homepage": "https://github.com/alterdata/web-patterns",
-    "authors": ["alterdata bernardbr@gmail.com"],
+    "authors": ["bernardbr", "tonyrapozo"],
     "description": "desc",
     "keywords": [],
     "license": "MIT",

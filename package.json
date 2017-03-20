@@ -58,7 +58,7 @@
     "type": "git",
     "url": "https://github.com/alterdata/web-patterns.git"
   },
-  "author": "alterdata",
+  "author": "bernardbr, tonyrapozo",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alterdata/web-patterns/issues"
