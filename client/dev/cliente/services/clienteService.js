@@ -13,7 +13,7 @@
           }
 
           salvar(cliente) {
-            if (cliente.id) {
+            if (!!cliente.id) {
               return this.atualizar(cliente);
             }
 
