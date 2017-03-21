@@ -12,6 +12,6 @@ before_script:
 
 script:
   - gulp coverage_frontend
-  - npm run-script test-on-travis
+  - npm t
 
 services: mongodb
