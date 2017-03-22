@@ -15,5 +15,5 @@ export const tasks = {
   CLIENT_COVERAGE: 'client.coverage',
   CLIENT_WATCH: 'client.watch',
   CLIENT_RELOAD: 'client.reload',
-  CLIENT_BUILD_DIST: 'npm run build-dist'
+  CLIENT_BUILD_DIST: 'client.build:dist'
 };
