@@ -17,9 +17,7 @@
             controllerAs: 'clienteListagemCtrl'
           })
           .when('/clientes/:id', {
-            templateUrl: './cliente/templates/cliente-cadastro.html',
-            controller: 'ClienteCadastroController',
-            controllerAs: 'clienteCadastroCtrl'
+            template: '<cliente-cadastro-component></cliente-cadastro-component>'
           })
           .otherwise({
             redirectTo: '/dashboard'
