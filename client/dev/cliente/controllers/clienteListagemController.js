@@ -11,8 +11,8 @@
             let self = this;
 
             $clienteService.obterTodos().then(
-              function (data) {
-                self.clientes = data;
+              data => {
+                this.clientes = data;
               }
             );
 
@@ -24,7 +24,7 @@
           }
 
           exibirCliente(cliente) {
-            $location.url('/clientes/' + cliente.id);
+            $location.url(`/clientes/${cliente.id}`);
           }
 
           removerCliente(cliente) {

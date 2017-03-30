@@ -6,7 +6,7 @@
       function ClienteModelFn() {
         class ClienteModel {
           constructor() {
-            var self = this;
+            let self = this;
 
             self.id = undefined;
             self.nome = '';
